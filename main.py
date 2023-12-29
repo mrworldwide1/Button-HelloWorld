@@ -20,7 +20,7 @@ def main():
     # music
     ost = pygame.mixer.music
     ost.load('xDeviruchi - Title Theme .wav')
-    ost.play(-1)
+    ost.play(-1) # loop parameter set to true
 
     # endless loop, every gameplay action happens here
     while True:
