@@ -6,19 +6,21 @@ import pygame, sys
 def setup():
     pygame.init()
 
-    # constants / variables
-    screenWidth = 1280
-    screenHeight = 720
+    # Define constants, variables
+    screenWidth = 500
+    screenHeight = 400
 
     screen = pygame.display.set_mode((screenWidth, screenHeight))
     pygame.display.set_caption('Clicker')
 
-setup()
-
 # Core part of code that runs everything
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            exit()
+def main():
+    while True:
+        for event in pygame.event.get():
+            # exit game when player quits
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
 
 setup()
+main()
