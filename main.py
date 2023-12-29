@@ -7,8 +7,8 @@ import pygame, sys
 
 pygame.init()
 
-screenWidth = 500
-screenHeight = 400
+screenWidth = 1280
+screenHeight = 720
 maxFPS = 60
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode((screenWidth, screenHeight))
