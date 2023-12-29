@@ -3,11 +3,22 @@
 
 import pygame, sys
 
-pygame.init()
+def setup():
+    pygame.init()
 
-# constants / variables
-screenWidth = 1280
-screenHeight = 720
+    # constants / variables
+    screenWidth = 1280
+    screenHeight = 720
 
-screen = pygame.display.set_mode((screenWidth, screenHeight))
-pygame.display.set_caption('Clicker')
+    screen = pygame.display.set_mode((screenWidth, screenHeight))
+    pygame.display.set_caption('Clicker')
+
+setup()
+
+# Core part of code that runs everything
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+setup()
