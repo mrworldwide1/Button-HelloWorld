@@ -16,9 +16,10 @@ pygame.display.set_caption('Clicker')
 
 # Core part that actually runs everything
 def main():
+    # endless loop
     while True:
         for event in pygame.event.get():
-            # exit game when player quits
+            # break loop when player quits
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
