@@ -16,6 +16,8 @@ screen = pygame.display.set_mode((screenWidth, screenHeight))
 
 # surfaces are like layers in photoshop! you fill each layer with stuff like text/color/images
 # then put the layers on the canvas
+
+# fills surface
 button = pygame.Surface((200, 200))
 button.fill(buttonColour)
 
