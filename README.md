@@ -1,3 +1,3 @@
 # Clicker
 
-## Simple button click game to test out pygame
+Simple button click game to test out pygame
