@@ -13,9 +13,10 @@ maxFPS = 60
 screen = pygame.display.set_mode((screenWidth, screenHeight))
 pygame.display.set_caption('Clicker')
 
+surface1 = pygame.Surface((100, 200))
+
 # Core part that actually runs everything
 def main():
-
     # music
     ost = pygame.mixer.music
     ost.load('xDeviruchi - Title Theme .wav')
