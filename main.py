@@ -7,8 +7,8 @@ import pygame, sys
 
 pygame.init()
 
-screenWidth = 1280
-screenHeight = 720
+screenWidth = 1000
+screenHeight = 500
 maxFPS = 60
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode((screenWidth, screenHeight))
@@ -17,8 +17,9 @@ pygame.display.set_caption('Clicker')
 # Core part that actually runs everything
 def main():
 
-    # pygame.mixer.music.load()
-	# pygame.mixer.music.play(-1)
+    ost = pygame.mixer.music
+    ost.load('xDeviruchi - Title Theme .wav')
+    ost.play(-1)
 
     # endless loop
     while True:
