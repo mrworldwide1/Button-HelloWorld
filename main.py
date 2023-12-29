@@ -16,6 +16,10 @@ pygame.display.set_caption('Clicker')
 
 # Core part that actually runs everything
 def main():
+
+    pygame.mixer.music.load()
+	pygame.mixer.music.play(-1)
+
     # endless loop
     while True:
         for event in pygame.event.get():
