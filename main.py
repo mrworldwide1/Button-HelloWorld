@@ -17,11 +17,12 @@ pygame.display.set_caption('Clicker')
 # Core part that actually runs everything
 def main():
 
+    # music
     ost = pygame.mixer.music
     ost.load('xDeviruchi - Title Theme .wav')
     ost.play(-1)
 
-    # endless loop
+    # endless loop, every gameplay action happens here
     while True:
         for event in pygame.event.get():
             # break loop when player quits
