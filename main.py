@@ -3,17 +3,18 @@
 
 import pygame, sys
 
-def setup():
-    pygame.init()
+# Setup
 
-    # Define constants, variables
-    screenWidth = 500
-    screenHeight = 400
+pygame.init()
 
-    screen = pygame.display.set_mode((screenWidth, screenHeight))
-    pygame.display.set_caption('Clicker')
+screenWidth = 500
+screenHeight = 400
+maxFPS = 60
+clock = pygame.time.Clock()
+screen = pygame.display.set_mode((screenWidth, screenHeight))
+pygame.display.set_caption('Clicker')
 
-# Core part of code that runs everything
+# Core part that actually runs everything
 def main():
     while True:
         for event in pygame.event.get():
@@ -21,6 +22,8 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
+    
+        pygame.display.update()
+        clock.tick(maxFPS)
 
-setup()
 main()
