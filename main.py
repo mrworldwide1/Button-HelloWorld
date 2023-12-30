@@ -1,5 +1,6 @@
 import pygame
 import sys
+import random
 
 pygame.init()
 
@@ -13,7 +14,7 @@ maxFPS = 60
 # define variables
 buttonWidth = 200
 buttonHeight = 200
-ostName = "xDeviruchi - Title Theme .wav"
+ostNames = ["xDeviruchi - Title Theme .wav", "xDeviruchi - Minigame .wav"]
 bgColour = "linen"
 buttonName = "button.png"
 
@@ -22,13 +23,13 @@ buttonName = "button.png"
 bg = pygame.Surface((screenWidth, screenHeight))
 bg.fill(bgColour)
 
-buttonSurface = pygame.image.load(buttonName)
+buttonSurface = pygame.image.load(buttonName).convert_alpha()
 buttonSurface = pygame.transform.scale(buttonSurface, (200,200))
 
 # Core part that actually runs everything
 def main():
     ost = pygame.mixer.music
-    ost.load(ostName)
+    ost.load(ostNames[random.randint(0,1)])
     ost.play()
 
     # entire game runs inside this loop, keeps the code running forever
@@ -39,10 +40,11 @@ def main():
                 pygame.quit()
                 sys.exit()
 
-        # place surfaces onto screen surface, at this point
+        # place surfaces onto screen surface
         screen.blit(bg, (0,0))
-        screen.blit(buttonSurface, (0,0))
+        screen.blit(buttonSurface, (400,200))
 
+        # update everything
         pygame.display.update()
         pygame.time.Clock().tick(maxFPS)
 
